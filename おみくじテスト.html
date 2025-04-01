@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>おみくじ</title>
+    </head>
+    <body>
+        ↓当たる↓<br>
+        <span style="font-size: 100px;">
+        <div id="omikuji"></div>
+        <botton onclick="omikujishow()">おみくじを引く</botton>
+        <script>
+        function omikujishow(){
+            var omikuji = new Array("大吉","中吉","小吉");
+
+            var number1 = Math.random();
+            var number2 = number1 * 3;
+            var num = Math.floor(number2);
+            var message = omikuji[num];
+        
+            var object = document.getElementById("omikuji");
+            object.innerText = message;
+        }
+        </script>
+        </span><br>
+        ↑当たる↑
+        
+    </body>
+</html>
